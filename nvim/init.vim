@@ -12,7 +12,7 @@ if !isdirectory(s:dein_repo_dir)
 	call system('git clone https://github.com/Shougo/dein.vim' . shellescape(s:dein_repo_dir))
 endif
 
-let &runtimepath = s:dein_repo_dir .','. &runtimepath
+let &runtimepath = &runtimepath .','. s:dein_repo_dir
 
 " dein call plugins
 let s:toml_file = expand('<sfile>:h').'/dein.toml'
