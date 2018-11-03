@@ -27,3 +27,12 @@ hook_add = '''
   " 但し Colorscheme イベントの発生が抑制されないよう nented を付ける。
   au MyAutoCmd VimEnter * nested colorscheme gruvbox
 '''
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'w0rp/ale'
