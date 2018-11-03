@@ -38,6 +38,10 @@ endif
 " ========================================
 " Key mapping
 " ========================================
+
+nnoremap j gj
+nnoremap k gk
+
 inoremap jj <Esc>
 inoremap kk <Esc>
 inoremap jk <Esc>
