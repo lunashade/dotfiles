@@ -77,6 +77,8 @@ nnoremap sQ :<C-u>bd<CR>
 " general settings
 " ========================================
 
+let g:mapleader = '<Space>'
+
 set number
 set list
 set smartindent
