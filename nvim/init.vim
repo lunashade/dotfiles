@@ -42,3 +42,17 @@ inoremap jj <Esc>
 inoremap kk <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
+
+
+" ========================================
+" general settings
+" ========================================
+
+set number
+set list
+set smartindent
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
