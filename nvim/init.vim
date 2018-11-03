@@ -42,5 +42,3 @@ inoremap jj <Esc>
 inoremap kk <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
-inoremap hh <Esc>
-inoremap ll <Esc>
