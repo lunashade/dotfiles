@@ -81,6 +81,7 @@ let g:mapleader = '<Space>'
 
 set number
 set list
+set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%
 set smartindent
 set tabstop=4
 set softtabstop=4
