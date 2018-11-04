@@ -90,3 +90,5 @@ set expandtab
 set smarttab
 
 set inccommand=split
+
+runtime! keymap.rc.vim
