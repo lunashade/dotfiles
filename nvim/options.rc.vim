@@ -2,8 +2,6 @@
 " general settings
 " ========================================
 
-let g:mapleader = '<Space>'
-
 set number
 set list
 set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%

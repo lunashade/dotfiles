@@ -34,6 +34,10 @@ hook_add = '''
     \   'python': ['flake8']
     \}
     let g:ale_statusline_format = ['E%d', 'W%d', 'ok']
+    let b:ale_fixers = {
+                \ 'python': ['autopep8', 'isort']
+                \}
+    let g:ale_fix_on_save = 1
 '''
 
 [[plugins]]
@@ -97,3 +101,10 @@ let g:lightline.component_type = {
       \ }
 let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
 '''
+
+[[plugins]]
+repo = 'kana/vim-smartinput'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['nerdtree']
