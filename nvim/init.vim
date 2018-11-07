@@ -2,6 +2,8 @@ augroup MyAutoCmd
 	autocmd!
 augroup END
 
+let g:mapleader="\<Space>"
+
 " dein settings {{{
 " dein install
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
