@@ -122,3 +122,23 @@ hook_add = '''
     vmap v <Plug>(expand_region_expand)
     vmap <C-v> <Plug>(expand_region_shrink)
 '''
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+hook_add = '''
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+'''
+[[plugins]]
+repo = 'zchee/deoplete-go'
+depends = ['deoplete']
+build = 'make'
+hook_add = '''
+let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+'''
