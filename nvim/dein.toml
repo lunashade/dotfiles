@@ -31,8 +31,10 @@ repo = 'tpope/vim-fugitive'
 repo = 'w0rp/ale'
 hook_add = '''
     let b:ale_linters = {
-    \   'python': ['flake8']
+    \   'python': ['flake8'],
+    \   'go': ['gometalinter']
     \}
+    let g:ale_go_gometalinter_options = "--fast --enable=staticcheck --enable=gosimple --enable=unused"
     let g:ale_statusline_format = ['E%d', 'W%d', 'ok']
     let b:ale_fixers = {
                 \ 'python': ['autopep8', 'isort']
@@ -123,18 +125,6 @@ hook_add = '''
     vmap <C-v> <Plug>(expand_region_shrink)
 '''
 
-[[plugins]]
-repo = 'zchee/nvim-go'
-build = 'make'
-on_ft = 'go'
-hook_add = '''
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-'''
 [[plugins]]
 repo = 'zchee/deoplete-go'
 depends = ['deoplete.nvim']
