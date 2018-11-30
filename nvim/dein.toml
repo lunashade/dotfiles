@@ -23,9 +23,24 @@ hook_add = '''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+    nnoremap [Gutter] <Nop>
+    nmap <leader>z [Gutter]
+    nnoremap [Gutter]j :GitGutterNextHunk<CR>
+    nnoremap [Gutter]k :GitGutterPrevHunk<CR>
+    nnoremap [Gutter]s :GitGutterStageHunk<CR>
+    nnoremap [Gutter]u :GitGutterUndoHunk<CR>
+'''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+hook_add = '''
+    nnoremap [Fugitive] <Nop>
+    nmap <leader>f [Fugitive]
+    nnoremap [Fugitive]c :Gcommit<CR>
+    nnoremap [Fugitive]s :Gstatus<CR>
+    nnoremap [Fugitive]d :Gdiff<CR>
+'''
 
 [[plugins]]
 repo = 'w0rp/ale'
@@ -40,6 +55,12 @@ hook_add = '''
                 \ 'python': ['autopep8', 'isort']
                 \}
     let g:ale_fix_on_save = 1
+
+    nnoremap [ale] <Nop>
+    nmap <leader>a [ale]
+    nnoremap [ale]j :ALENext<CR>
+    nnoremap [ale]k :ALEPrevious<CR>
+    nnoremap [ale]f :ALEFix<CR>
 '''
 
 [[plugins]]

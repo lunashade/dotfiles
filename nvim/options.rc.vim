@@ -2,6 +2,8 @@
 " general settings
 " ========================================
 
+set noswapfile
+set nobackup
 set number
 set list
 set listchars=tab:»-,eol:↲,extends:»,precedes:«,nbsp:%
