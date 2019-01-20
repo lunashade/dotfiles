@@ -1,0 +1,10 @@
+[ghq]
+    root = ~/src
+    root = ~/.go/src
+[user]
+	email = word47wonders@gmail.com
+	name = lunashade
+[core]
+	editor = nvim
+[color]
+	ui = true
