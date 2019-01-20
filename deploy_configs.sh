@@ -1,4 +1,8 @@
 #!/bin/sh
 
 cd `dirname $0`
-ln -svfn ${PWD}/config ${HOME}/.config
+cd config
+for f in *
+do
+    ln -svfn ${PWD}/${f} ${HOME}/.config/${f}
+done
