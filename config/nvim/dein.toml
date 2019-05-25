@@ -46,19 +46,21 @@ hook_add = '''
 repo = 'w0rp/ale'
 hook_add = '''
     let b:ale_linters = {
-    \   'python': ['flake8'],
-    \   'go': ['gometalinter']
+    \   'python': ['pyls'],
     \}
-    let g:ale_go_gometalinter_options = "--fast --enable=staticcheck --enable=gosimple --enable=unused"
     let g:ale_statusline_format = ['E%d', 'W%d', 'ok']
     let b:ale_fixers = {
-                \ 'python': ['autopep8', 'isort']
+                \ 'python': ['pyls', 'isort'],
+                \ 'c': ['clang-format'],
+                \ 'go': ['gofmt', 'goimports']
                 \}
-    let g:ale_fix_on_save = 1
+    let g:ale_fix_on_save = 0
 
     nnoremap [ale] <Nop>
     nmap <leader>a [ale]
     nnoremap [ale]j :ALENext<CR>
+    nnoremap [ale]f :ALEFix<CR>
+    nnoremap [ale]l :ALELint<CR>
     nnoremap [ale]k :ALEPrevious<CR>
     nnoremap [ale]f :ALEFix<CR>
 '''
@@ -68,6 +70,12 @@ repo = 'scrooloose/nerdtree'
 hook_add = '''
   nnoremap <silent><C-e> :NERDTreeToggle<CR>
 '''
+
+[[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -105,6 +113,9 @@ hook_add = '''
     \ },
     \ }
 '''
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+depends = ['vim-lsp', 'deoplete']
 
 [[plugins]]
 repo = 'maximbaz/lightline-ale'
