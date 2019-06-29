@@ -6,9 +6,6 @@ nnoremap j gj
 nnoremap k gk
 
 inoremap jj <Esc>
-inoremap kk <Esc>
-inoremap jk <Esc>
-inoremap kj <Esc>
 
 " s-* keymappings.
 " https://qiita.com/tekkoc/items/98adcadfa4bdc8b5a6ca

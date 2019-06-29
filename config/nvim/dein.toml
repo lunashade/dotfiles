@@ -50,7 +50,7 @@ hook_add = '''
     \}
     let g:ale_statusline_format = ['E%d', 'W%d', 'ok']
     let b:ale_fixers = {
-                \ 'python': ['pyls', 'isort'],
+                \ 'python': ['autopep8', 'isort'],
                 \ 'c': ['clang-format'],
                 \ 'go': ['gofmt', 'goimports']
                 \}
@@ -178,5 +178,4 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
-let g:go_fmt_command = "goimports"
 '''

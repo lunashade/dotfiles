@@ -3,6 +3,7 @@ augroup MyAutoCmd
 augroup END
 
 let g:mapleader="\<Space>"
+let g:python_host_prog="python3"
 
 " dein settings {{{
 " dein install
